@@ -13,9 +13,9 @@
 	
 	<meta name="description" content="Igne Natura Renovatur Integra. A website by Tom Hackshaw with teaching resources for students and teachers alike.">
 
-	<link rel="stylesheet" href="_/css/_print/main.css" media="print">
-    <link rel="stylesheet" href="_/css/shadowbox.css" />
-	<link rel="stylesheet" href="_/css/index.css">
+	<link rel="stylesheet" href="/main.css" media="print">
+    <link rel="stylesheet" href="/shadowbox.css" />
+	<link rel="stylesheet" href="/index.css">
 
 	<!--[if IE]>
 	<link rel="stylesheet" href="_/css/_patches/win-ie-all.css">
@@ -27,11 +27,9 @@
 	<link rel="stylesheet" href="_/css/_patches/win-ie-old.css">
 	<![endif]-->
     
-    <script type="text/javascript" src="_/js/jquery.min.js"></script>
-    <script type="text/javascript" src="_/js/cufon-yui.js"></script>
-    <script type="text/javascript" src="_/js/shadowbox.js"></script>
-    <script type="text/javascript" src="_/js/CorporateA-Regular_500.font.js" ></script>
-    <script type="text/javascript" src="_/js/script.js"></script>
+    <script type="text/javascript" src="/cufon-yui.js"></script>
+    <script type="text/javascript" src="/shadowbox.js"></script>
+    <script type="text/javascript" src="/script.js"></script>
     <script type="text/javascript">
         Shadowbox.init({overlayOpacity:"0.95", overlayColor:"#FFF", counterType:"skip", counterLimit:"20", continuous:"true", modal:false, handleOversize:"resize", animate:false});
     //Shadowbox.init({overlayOpacity:"0.8", overlayColor:"#FFF", counterType:"skip", counterLimit:"20", continuous:"true", modal:false, handleOversize:"resize", animate:false});
@@ -41,18 +39,18 @@
         Cufon.replace('#headline a', {
             hover: { color: '#3185f5'},
             color: '#757575'
-        }); //h1と記述した部分のフォントが変わります
+        }); 
         Cufon.now();
         });
     </script>
 	<script type="text/javascript" >
 	<!--[CDATA[
 		var navImgs = [
-			"news","biography",
-			"works", "contact",
-			"publications", "links"
+			"portfolio","models",
+			"lessons", "contact",
+			
 		];
-		var navImgsPrefix = "_/img/";
+		var navImgsPrefix = "/";
 		var navImgsPostfix = ".png";
 		var navImgsActive = "_active";
 
@@ -95,17 +93,17 @@
 		
 			<ul>
 				<li><a href="portfolio"><img src="/portfolio.png" alt="portfolio of Tom Hackshaw's teaching" title="portfolio" /></a></li>
-				<li><a href="models"><img src="/models.png" alt="aotearoa artist models" title="artist models" /></a></li>
-				<li><a href="works/voyage"><img src="_/img/works.png" alt="works" title="works" /></a></li>
-				<li><a href="contact"><img src="_/img/contact.png" alt="contact" title="contact" /></a></li>
-				<li><a href="publications"><img src="_/img/publications.png" alt="publications" title="publications" /></a></li>
-				<li><a href="links"><img src="_/img/links.png" alt="links" title="links" /></a></li>
+				<li><a href="models"><img src="/models.png" alt="aotearoa artist models" title="models" /></a></li>
+				<li><a href="lessons"><img src="/lessons.png" alt="lesson files" title="lessons" /></a></li>
+				<li><a href="mailto:tom@tomhackshaw.com"><img src="/contact.png" alt="contact" title="contact" /></a></li>
+				
 			</ul>
         </nav>
         <div id="headline" style="clear: both; padding: 0; margin: 0; padding-top: 12px;">
-        <a href="_/img/news/flyer2.png" rel="shadowbox[2019_new_projection_wip_top]"><p></p><p style="margin-top: 16px;">IGNE NATURA RENOVATUR INTEGRA</p></a >
+        <a href="/img/news/flyer2.png" rel="shadowbox[2019_new_projection_wip_top]"><p></p><p style="margin-top: 16px;">IGNE NATURA RENOVATUR INTEGRA</p></a >
         </div>
 	</header>
+	<script src="//instant.page/1.1.0" type="module" integrity="sha384-EwBObn5QAxP8f09iemwAJljc+sU+eUXeL9vSBw1eNmVarwhKk2F9vBEpaN9rsrtp"></script>
 </body>
 </html>
 
