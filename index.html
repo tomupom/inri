@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head class="html5reset-bare-bones">
+
+	<meta charset="utf-8">
+
+    <!--[if lt IE 9]>  
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>  
+    <![endif]-->  
+	
+	<title>I N R I</title>
+	
+	<meta name="description" content="Igne Natura Renovatur Integra. A website by Tom Hackshaw with teaching resources for students and teachers alike.">
+
+	<link rel="stylesheet" href="_/css/_print/main.css" media="print">
+    <link rel="stylesheet" href="_/css/shadowbox.css" />
+	<link rel="stylesheet" href="_/css/index.css">
+
+	<!--[if IE]>
+	<link rel="stylesheet" href="_/css/_patches/win-ie-all.css">
+	<![endif]-->
+	<!--[if IE 7]>
+	<link rel="stylesheet" href="_/css/_patches/win-ie7.css">
+	<![endif]-->
+	<!--[if lt IE 7]>
+	<link rel="stylesheet" href="_/css/_patches/win-ie-old.css">
+	<![endif]-->
+    
+    <script type="text/javascript" src="_/js/jquery.min.js"></script>
+    <script type="text/javascript" src="_/js/cufon-yui.js"></script>
+    <script type="text/javascript" src="_/js/shadowbox.js"></script>
+    <script type="text/javascript" src="_/js/CorporateA-Regular_500.font.js" ></script>
+    <script type="text/javascript" src="_/js/script.js"></script>
+    <script type="text/javascript">
+        Shadowbox.init({overlayOpacity:"0.95", overlayColor:"#FFF", counterType:"skip", counterLimit:"20", continuous:"true", modal:false, handleOversize:"resize", animate:false});
+    //Shadowbox.init({overlayOpacity:"0.8", overlayColor:"#FFF", counterType:"skip", counterLimit:"20", continuous:"true", modal:false, handleOversize:"resize", animate:false});
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+        Cufon.replace('#headline a', {
+            hover: { color: '#3185f5'},
+            color: '#757575'
+        }); //h1と記述した部分のフォントが変わります
+        Cufon.now();
+        });
+    </script>
+	<script type="text/javascript" >
+	<!--[CDATA[
+		var navImgs = [
+			"news","biography",
+			"works", "contact",
+			"publications", "links"
+		];
+		var navImgsPrefix = "_/img/";
+		var navImgsPostfix = ".png";
+		var navImgsActive = "_active";
+
+		$(function(){
+			$("nav ul li a img").each(function(index){
+				$(this).hover(
+					function(){onMenuMouseOver(index);},
+					function(){onMenuMouseOut(index);}
+				);
+			});
+		});
+		function onMenuMouseOver(index_){
+			$("nav ul li a img").each(function(index){
+				if(index != index_ && this.src != navImgsPrefix+navImgs[index]+navImgsPostfix){
+					this.src = navImgsPrefix+navImgs[index]+navImgsPostfix;
+				}
+				if(index == index_ && this.src != navImgsPrefix+navImgs[index]+navImgsActive+navImgsPostfix){
+					this.src = navImgsPrefix+navImgs[index]+navImgsActive+navImgsPostfix;
+				}
+			});
+		}
+		function onMenuMouseOut(index_){
+			$("nav ul li a img").each(function(index){
+				if(this.src != navImgsPrefix+navImgs[index]+navImgsPostfix){
+					this.src = navImgsPrefix+navImgs[index]+navImgsPostfix;
+				}
+			});
+		}
+		
+	//]]-->
+    </script>
+   
+
+</head>
+
+<body id="index">
+	<header>
+		<h1><img src="/title.png" alt="Tom Hackshaw title" title="Tom Hackshaw" /></h1>
+		<nav>
+		
+			<ul>
+				<li><a href="portfolio"><img src="/portfolio.png" alt="portfolio of Tom Hackshaw's teaching" title="portfolio" /></a></li>
+				<li><a href="models"><img src="/models.png" alt="aotearoa artist models" title="artist models" /></a></li>
+				<li><a href="works/voyage"><img src="_/img/works.png" alt="works" title="works" /></a></li>
+				<li><a href="contact"><img src="_/img/contact.png" alt="contact" title="contact" /></a></li>
+				<li><a href="publications"><img src="_/img/publications.png" alt="publications" title="publications" /></a></li>
+				<li><a href="links"><img src="_/img/links.png" alt="links" title="links" /></a></li>
+			</ul>
+        </nav>
+        <div id="headline" style="clear: both; padding: 0; margin: 0; padding-top: 12px;">
+        <a href="_/img/news/flyer2.png" rel="shadowbox[2019_new_projection_wip_top]"><p></p><p style="margin-top: 16px;">IGNE NATURA RENOVATUR INTEGRA</p></a >
+        </div>
+	</header>
+</body>
+</html>
+
+
