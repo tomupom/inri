@@ -1,0 +1,315 @@
+/*- self-clearing floats ----------*/
+
+.mod:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+html, body{
+    min-height: 100%;
+}
+
+body{
+    width: 100%;
+
+    font: normal normal 12px/21px "Helvetica","Arial",sans-serif;
+    color: black;
+}
+div#wrap{
+    width: 1024px;
+    position: absolute;
+    left: 50%;
+    margin-left: -512px;
+
+    min-height: 100%;
+}
+
+a{
+    color: #999;
+    text-decoration: none;
+}
+a:hover{
+    color: black;
+}
+
+header{
+    position: absolute;
+    height: 200px;
+    width: 980px;
+    background: white;
+    z-index: 10;
+}
+nav#global{
+    position: absolute;
+    top: 25px;
+    left: 78px;
+
+    line-height: 26px;
+    width: 150px;
+}
+nav#global ul li{
+    height: 26px;
+}
+nav#global ul li img{
+    position: absolute;
+    display: block;
+}
+
+
+h1{
+    position: absolute;
+    top: 25px;
+    left: 326px;
+}
+
+div.content{
+    position: absolute;
+    top: 200px;
+    left: 326px;
+}
+
+footer{
+    font-size: 7pt;
+    position: absolute;
+    padding-bottom: 45px;
+	bottom: 0px;
+    left: 326px;
+}
+
+nav.sub{
+    position: absolute;
+    left: 326px;
+    width: 654px;
+    top: 200px;
+    z-index: 20;
+}
+nav.sub ul{
+    position: absolute;
+    bottom: 60px;
+    width: 654px;
+
+}
+nav.sub ul li{
+    float: left;
+    padding-right:5px;
+    margin-right: 5px;
+    border-right: 1px solid #CCC;
+    line-height: 100%;
+}
+nav.sub ul li.last{
+    float: none;
+    border-right: none;
+}
+
+/* ------------ news ---------------- */
+#news{
+    letter-spacing: 0.05em;
+}
+
+#news p.photos{
+	width: 660px;
+	text-align: left;
+	line-height: 100%;
+}
+
+#news p.photos img{
+	float: left;
+	margin: 1px;
+    object-fit: cover;
+}
+
+/* ------------ biography ---------------- */
+#biography{
+    padding-bottom: 100px;
+    padding-top: 25px;
+}
+#biography ul{
+    list-style: none;
+}
+#biography h2{
+    font-weight: normal;
+}
+#biography h3{
+    font-weight: normal;
+    letter-spacing: 0em;
+}
+#biography section{
+    margin-bottom: 21px;
+    letter-spacing: 0.05em;
+}
+
+nav.sub#chrono{
+    border-bottom: 1px solid #CCC;
+    left: 50%;
+    margin-left: -158px;
+    position: fixed;
+}
+nav.sub#chrono ul{
+}
+nav.sub#chrono ul li{
+    font-size: 11px;
+    color: #CCC;
+}
+
+aside#counter{
+    position:fixed;
+    z-index: 30;
+    top: 180px;
+    left: 50%;
+    margin-left: -460px;
+    /*overflow:hidden;*/
+    width:90px;
+    height: 110px;
+    background: url(../img/chrono.png) 0px 20px no-repeat;
+}
+aside#counter a#counter_cursor_up,
+aside#counter a#counter_cursor_down{
+    position: absolute;
+    left: 12px;
+}
+
+aside#counter #counter_cursor_up{
+    top: -7px;
+}
+aside#counter #counter_cursor_down{
+    top: 93px;
+}
+
+/* ------------ works ---------------- */
+#works{
+    padding-bottom: 100px;
+}
+nav#worklist{
+    font-size: 16px;
+}
+#works dl{
+    font-size: 10px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+}
+#works dl dt{
+    color: #F5AB28;
+}
+
+#workimages{
+    margin-left: -326px;
+    margin-bottom: 55px;
+    width:980px;
+    height: 403px;
+    overflow: hidden;
+    background: black;
+}
+#workimages img{
+    position: absolute;
+    z-index: 0;
+}
+#worklist a{
+    color: black;
+}
+/* ------------ publications ---------------- */
+nav#publist{
+    font-size: 14px;
+}
+nav#publist ul li{
+}
+nav#publist ul li a{
+    color: black;
+}
+nav#publist ul li{
+    padding-right: 7px;
+    margin-right: 7px;
+}
+nav#publist ul.submenu{
+    width: 650px;
+    bottom: 36px;
+}
+div#pubphotolist ul{
+    width: 700px;
+    list-style: none;
+    clear: left;
+}
+div#pubphotolist ul li{
+    float: left;
+    margin: 1px;
+    height: 81px;
+    width: 131px;
+    background: #F5F5F5;
+}
+div#pubphotolist img{
+}
+
+#publications dl dt h2{
+    font-size: 13px;
+}
+#publications dl dt{
+    line-height: 21px;
+}
+#publications dl dd{
+    font-size: 9px;
+    line-height: 17px;
+}
+
+p#photo{
+    float: right;
+    width: 654px;
+    height: 403px;
+    //background: #E5E5E5;
+    background: white;
+}
+#publications dd a{
+	color: #A00;
+}
+#publications dd a:hover{
+	color: gray;
+}
+
+/* ------------ contact ---------------- */
+#contact{
+    /*margin-top: -6px;*/
+}
+/*#contact article h2{
+    font-size: 18px;
+    line-height: 28px
+}
+#contact article p{
+    font-size: 15px;
+    line-height: 28px
+}*/
+
+/* ------------ links ---------------- */
+#links{
+    margin-top: -10px;
+}
+#links ul{
+    margin-bottom:36px;
+    list-style: none;
+}
+#links ul li{
+    font-size: 18px;
+    line-height: 36px;
+}
+
+#links ul li a{
+      color: black;
+  filter: alpha(opacity=40);
+  -moz-opacity:0.4;
+  opacity:0.4;
+	text-decoration: none;
+}
+#links ul li a:hover{
+  filter: alpha(opacity=100);
+  -moz-opacity:1.0;
+  opacity:1.0;
+}
+
+
+.selected_{
+    color: #000000;
+}
+
+.deselected_{
+    color: #646464;
+}
