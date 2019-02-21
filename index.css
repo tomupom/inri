@@ -1,34 +1,338 @@
+/* undefined-medium.css
+ * Andi Rueckel
+ * <info@andirueckel.com> */
 
-/*-  CSS "libraries"
-----------------------------------------------------------------------*/
-@import url("reset.css");
+@import url("/assets/css/normalize.css");
+@import url("/assets/css/fonts.css");
 
-
-/*-  Core, patch-free design
-----------------------------------------------------------------------*/
-@import url("core-index.css");
-
-
-/*-  Browser-specific patches
-----------------------------------------------------------------------*/
-/*\*//*/
-@import url("patches/mac-ie5.css");
-/**/
-
-#headline a {
-    margin: 0;
-    padding: 0;
-    font-size:2.6em; 
-    text-decoration: none;
-    letter-spacing: 0.05em;
-    line-height: 0;
+*, *::before, *::after {
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
 }
 
-/* #headline a p {
-    color: black;
+*::-moz-selection {
+	background-color:rgb(240,240,240);
+	/*
+	background-color:rgb(0,0,0);
+	color:rgb(137,237,255);
+	*/
 }
 
-#headline:hover a p{
-    color: darkblue;
-    opacity: 0.6;
-} */
+*::selection {
+	background-color:rgb(240,240,240);
+	/*
+	background-color:rgb(0,0,0);
+	color:rgb(137,237,255);
+	*/
+}
+
+html {
+	cursor:-webkit-text;
+	cursor:text;
+	font-family:"undefined medium",monospace;
+	-webkit-font-kerning:normal;
+	font-kerning:normal;
+	font-size:1em;
+	font-style:normal;
+	font-weight:normal;
+	height:100vh;
+	letter-spacing:normal;
+	line-height:1.3;
+	margin:0 auto;
+	max-width:60rem;
+	overflow-y:scroll;
+	/* smooth scrolling */
+	-webkit-overflow-scrolling:touch;
+	/* remove highlight when clicking link */
+	-webkit-tap-highlight-color:transparent;
+}
+
+body {
+	color:rgb(0,0,0);
+	margin:0 1.5rem;
+	opacity:0;
+	-webkit-animation:init 1.5s ease-in 0.3s 1 forwards;
+	animation:init 1.5s ease-in 0.3s 1 forwards;
+}
+
+a {
+	color:rgb(0,0,0);
+	cursor:-webkit-ne-resize;
+	cursor:ne-resize;
+	outline:none;
+	text-decoration:none;
+}
+
+a:link {
+	outline:none;
+	text-decoration:none;
+}
+
+a:visited {
+	outline:none;
+	text-decoration:line-through;
+}
+
+a:hover {
+	outline:none;
+	text-decoration:underline;
+	text-decoration-skip:ink;
+}
+
+a:focus {
+	color:rgb(255,13,37);
+	outline:none;
+}
+
+a:active {
+	color:rgb(255,13,37);
+	outline:none;
+}
+
+em, i {
+	font-style:italic;
+}
+
+/*
+hr {
+	border:none;
+	border-bottom:1px;
+	border-bottom-style:solid;
+}
+*/
+
+strong {
+	font-weight:bold;
+}
+
+ul {
+	list-style-type:none;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, pre {
+	font-size:inherit;
+	line-height:inherit;
+	margin-top:0;
+	margin-left:0;
+	margin-right:0;
+	margin-bottom:1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight:normal;
+}
+
+h1 {
+	font-size:1.5rem;
+}
+
+h2 {
+	font-size:1rem;
+}
+
+header {
+	margin-top:2rem;
+}
+
+footer {
+	font-size:1rem;
+	overflow:auto;
+}
+
+a:link[href*="//"]:not([href*=".undefined-medium.com"])::after,
+a:link[href^="mailto:"]::after,
+a:link[href^="tel:"]::after {
+	color:rgb(255,13,37);
+	content:"\2197";
+	/* remove a:link text-decoration */
+	display:inline-block;
+	font-size:0.55rem;
+	margin-left:0.05rem;
+	margin-right:-0.05rem;
+	/* align smaller text with cap-height */
+	vertical-align:super;
+}
+
+img[alt=""],
+img:not([alt]) {
+	border:3px dashed rgb(255,0,0);
+}
+
+/*
+main figure {
+	font-size:0;
+	line-height:0;
+	margin:1.5rem auto;
+	text-align:center;
+}
+
+main figure img,
+main figure video {
+	max-height:100%;
+	max-height:calc(100vh - 4.7rem);
+	max-width:100%;
+}
+
+main figure#error {
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-right:-50%;
+	-webkit-transform:translate(-50%,-50%);
+	transform:translate(-50%,-50%);
+	z-index:-1;
+}
+
+main figure#error img.error {
+	max-height:100%;
+	max-height:80vh;
+	max-width:100%;
+	max-width:80vw;
+}
+*/
+
+main section {
+	margin-bottom:3rem;
+}
+
+main section > h2 {
+	margin-bottom:1rem;
+}
+
+main section > h2 + p:not(:last-of-type) {
+	margin-bottom:2rem;
+}
+
+main section#specimen > h2 + p {
+	letter-spacing:0.35em;
+	line-height:2;
+	margin-left:1.5rem;
+	overflow-wrap:break-word;
+	max-width:calc(100% - 3rem);
+	word-wrap:break-word;
+}
+
+main section#specimen > h2#fractions + p {
+	letter-spacing:0.7em;
+}
+
+.blink {
+	-webkit-animation:blink 1s step-end infinite;
+	animation:blink 1s step-end infinite;
+}
+
+.line-through {
+	text-decoration:line-through;
+}
+
+@-webkit-keyframes blink {
+	50% {
+		visibility:hidden;
+	}
+}
+
+@keyframes blink {
+	50% {
+		visibility:hidden;
+	}
+}
+
+@-webkit-keyframes init {
+	from {
+		opacity:0;
+	}
+	to {
+		opacity:1;
+	}
+}
+
+@keyframes init {
+	from {
+		opacity:0;
+	}
+	to {
+		opacity:1;
+	}
+}
+
+/* 319px */
+@media (max-width:19.938em) {
+	html {
+		font-size:1em;
+	}
+}
+
+/* 320px */
+@media (min-width:20em) {
+	html {
+		font-size:1.15em;
+	}
+}
+
+/* 480px */
+@media (min-width:30em) {
+	html {
+		font-size:1.3em;
+	}
+}
+
+/* 640px */
+@media (min-width:40em) {
+	html {
+		font-size:1.45em;
+	}
+}
+
+/* 800px */
+@media (min-width:50em) {
+	/*
+	html {
+		font-size:1.6em;
+	}
+	*/
+}
+
+/* 960px */
+@media (min-width:60em) {
+	/*
+	html {
+		font-size:1.75em;
+	}
+	*/
+}
+
+/*
+@media (orientation:landscape) {
+}
+
+@media (orientation:portrait) {
+}
+
+@media (orientation:landscape) and (min-width:960px) {
+}
+
+@media (orientation:portrait), (max-width:960px) {
+}
+*/
+
+/*
+@supports not (list-style-type:"\2013\2002\200a") {
+	main li::before {
+		content:"\2013\2002\200a";
+		margin-left:-1.0417em;
+	}
+}
+*/
+
+/* WTF?! no rem or em?! */
+/*
+@-moz-document url-prefix() {
+*/
+	html {
+		max-width:960px;
+	}
+/*
+}
+*/
