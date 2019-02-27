@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="license" href="//creativecommons.org/licenses/by-nc-sa/2.0">
     <link rel="stylesheet" type="text/css" href="/index.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js">
     <title>I N R I</title>
   </head>
   <body>
@@ -29,6 +30,84 @@
     <footer>
 	    <img src="https://img.shields.io/badge/inri--vers-1.2-Pink.svg" alt="inri-version-badge" />
 	    <img src="https://img.shields.io/badge/license-cc%20by--nc--sa-Blue.svg" alt="inri-license" />
+		<h5>IGNE NATURA RENOVATUR INTEGRA</h5>
+	    
+		    (function($) {
+        $.fn.textWidth = function(){
+             var calc = '<span style="display:none">' + $(this).text() + '</span>';
+             $('body').append(calc);
+             var width = $('body').find('span:last').width();
+             $('body').find('span:last').remove();
+            return width;
+        };
+       
+        $.fn.marquee = function(args) {
+            var that = $(this);
+            var textWidth = that.textWidth(),
+                offset = that.width(),
+                width = offset,
+                css = {
+                    'text-indent' : that.css('text-indent'),
+                    'overflow' : that.css('overflow'),
+                    'white-space' : that.css('white-space')
+                },
+                marqueeCss = {
+                    'text-indent' : width,
+                    'overflow' : 'hidden',
+                    'white-space' : 'nowrap'
+                },
+                args = $.extend(true, { count: -1, speed: 1e1, leftToRight: false }, args),
+                i = 0,
+                stop = textWidth*-1,
+                dfd = $.Deferred();
+           
+            function go() {
+                if(that.css('overflow')!="hidden") { 
+                    that.css('text-indent', width + 'px'); 
+                    return false;
+                }
+                if(!that.length) return dfd.reject();
+                if(width == stop) {
+                    i++;
+                    if(i == args.count) {
+                        that.css(css);
+                        return dfd.resolve();
+                    }
+                    if(args.leftToRight) {
+                        width = textWidth*-1;
+                    } else {
+                        width = offset;
+                    }
+                }
+                that.css('text-indent', width + 'px');
+                if(args.leftToRight) {
+                    width++;
+                } else {
+                    width--;
+                }
+                setTimeout(go, args.speed);
+            };
+            
+            if(args.leftToRight) {
+                width = textWidth*-1;
+                width++;
+                stop = offset;
+            } else {
+                width--;            
+            }
+            that.css(marqueeCss);
+            go();
+            return dfd.promise();
+        };
+               // $('h5').marquee();
+$("h5").marquee();
+    $("h5").mouseover(function () {     
+        $(this).removeAttr("style");
+   }).mouseout(function () {
+        $(this).marquee();
+   });
+ })(jQuery);
+
       
 	    <p>🄯 2018–2019 by Tom Hackshaw.</p>
     </footer>
