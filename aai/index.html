@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Poko es un estudio creativo independiente con oficina en Barcelona y Lima. Hacemos la publicidad que no parece publicidad.">
+    <meta name="keywords" content="Poko advertising agency barcelona lima España Peru">
+    <meta name="author" content="poko.ad">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="3 month">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="”Content-Language”" content="en">
+
+    <title>Poko — Advertising Agency</title>
+    <link type="text/css" rel="stylesheet" href="./reset.css">
+    <link type="text/css" rel="stylesheet" href="./styles.css">
+    <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+</head>
+<body>
+    <img src="./img/poko_logo.png" id="logo">
+    <div id="title">Web under destruction</div>
+    <div id="dialog">
+        After some years in the World Wide Web we feel this <br>
+        is not the place to start a conversation. Don’t you?
+    </div>
+    <div id="footer">
+        <div id="barcelona">
+            <h2><a href="https://goo.gl/maps/fNbFD7QtGm12" target="_blank">Barcelona</a></h2>
+            Mendel 4 08034<br>
+            34 663791253<br>
+            <a class="mail" href="mailto:bcn@poko.ad" target="_blank">bcn@poko.ad</a><br>
+        </div>
+        <div id="lima">
+            <h2><a href="https://goo.gl/maps/x8eGUrKGdmC2" target="_blank">Lima</a></h2>
+            Junín 210<br>
+            51 952989503<br>
+            <a class="mail" href="mailto:lima@poko.ad" target="_blank">lima@poko.ad</a><br>
+        </div>
+    </div>
+    <div id="background"></div>
+</body>
+<script type="text/javascript">
+    let vids=[
+        'HtTUsOKjWyQ',
+        'sh2Ov4S4iuc',
+        'Emln7uUcNvE',
+       // 'xXG-O-9uN6A',
+        'lnW5pJbPvXs',
+        'PK_Nc1_gKIw',
+        'LKHd-7y0Uo8',
+        'azh70WOb6_o'
+    ];
+
+    let playlist=`PL6TAUYo8NCvTeiab8eKT55hzssLXSlrJ8`;
+
+
+    let dialog = document.getElementById('dialog');
+
+    var done = false;
+    var player;
+
+
+
+
+    let showDialog=function(e){
+        dialog.style.display = 'block';
+        dialog.style.left = e.offsetX+20+'px';
+        dialog.style.top  = e.offsetY+20+'px';
+    }
+
+    let hideDialog = function(e){
+        dialog.style.display = 'none';
+    }
+
+    let crash= function(e){
+        console.log('crash')
+        document.body.setAttribute('dark',true);
+        document.getElementById('background').style.display='block';
+        let video = document.createElement('div');
+        video.style.position='absolute';
+        video.style.background='grey';
+        document.getElementById('background').appendChild(video);
+
+        let vid = vids[ Math.round( Math.random() * vids.length ) ];
+        if (typeof window.orientation === 'undefined' || window.innerWidth>800){
+            video.style.top  = e.offsetY+'px';
+            video.style.left = e.offsetX+'px';
+            video.innerHTML  = '<iframe src="http://www.youtube.com/embed/'+vid+'?autoplay=1&rel=0&loop=1&modestbranding=1&iv_load_policy=3&fs=0&cc_load_policy=1&autohide=1&showinfo=0&playlist='+vid+'" width="480" height="224" frameborder="0" allowfullscreen></iframe>';
+        }else{
+            video.id        = 'mobile_video';
+            video.style.top        = '0px';
+            video.style.left       = '0px';
+
+            player = new YT.Player('mobile_video', {
+                height: window.innerHeight,
+                width: window.innerWidth,
+                videoId: '1woiGfJ7rDA',
+                events: {
+                    'onReady': event=>{
+                        //an update to iOS that requires you to mute the video before you play it
+                        var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+                        if(iOS) event.target.mute();
+                        player.seekTo(110)
+                        event.target.playVideo();
+                    },
+                    'onStateChange': event=> {
+                        if( event.data === YT.PlayerState.ENDED ){
+                            player.seekTo(110)
+                            event.target.playVideo();
+                        }
+                    }
+                }
+            });
+
+        }
+    }
+
+    let showDialogMobile= function(){
+        let top= document.getElementById('title').offsetHeight-15;
+        dialog.style.display = dialog.style.display === 'block' ? 'none' : 'block';
+        dialog.style.top = top+'px';
+        dialog.style.left = '35px';
+        dialog.style.marginRight = '35px';
+    }
+
+    if(window.innerWidth>800){
+        document.getElementById('title').addEventListener('mousemove',showDialog)
+        document.getElementById('title').addEventListener('mouseout', hideDialog)
+        document.getElementById('logo').addEventListener('mousemove',showDialog)
+        document.getElementById('logo').addEventListener('mouseout', hideDialog)
+        document.getElementById('background').addEventListener('click', crash)
+        document.getElementById('title').addEventListener('click', crash)
+    }else document.getElementById('title').addEventListener('click', showDialogMobile)
+    document.getElementById('logo').addEventListener('click', crash)
+
+/*
+    // DISABLED VISUAL GLITCH EFFECT
+    let glitchSequence  = [ 18, 16,3,10,10, 13,14,6,18,19, 4, 7 ];
+   // let glitchSequence  = [12,7,10, 7, 15,12, 19,12, 12,1];
+    let glitchSamples   = 20;
+    let glitchSample    = 0;
+    let glitchMaxLength = 12;
+
+    let c =0;
+    let active=false;
+    let glitchFrame=0;
+    let length= 10;
+
+    let g= document.getElementById('g');
+    let context = g.getContext('2d');
+
+    var screenshot;
+    let all=[];
+
+    let glitchTrigger= function(){
+        if(!active){
+            active = randomBoolean(.4);
+            if(active){
+                g.style.display='block';
+                length =  Math.round( Math.random( Date.now() )*glitchMaxLength );
+                console.log('start of glitch')
+            }else g.style.display='none';
+        }
+        let nextGlitchTime = Math.round( Math.random( Date.now() ) *5 )*1000
+        setTimeout(glitchTrigger, nextGlitchTime);
+    };
+
+    let randomBoolean = function(chance=.5){
+       let val = Math.random( Date.now() );
+       return ( chance > val ) ? true : false;
+    }
+
+
+    let newFrame = async function(){
+        if(active){
+            if(c===7){
+                c=0;
+                glitchFrame++;
+                if(glitchFrame>length){
+                    glitchFrame=0;
+                    active= false;
+                    console.log('end of glitch')
+                    g.style.display='none';
+                }
+
+                glitchSample = randomBoolean(.8) ? Math.random() * glitchSamples << 0 : glitchSample;
+                console.log(glitchSample)
+
+                if( all[glitchSample] !== undefined ){
+                    context.putImageData( all[glitchSample], 0, 0 );
+                }
+            }
+            c++;
+        }
+        requestAnimationFrame( newFrame );
+    };
+
+
+    html2canvas(document.body).then(async function(canvas){
+        let ctx = canvas.getContext( '2d' );
+        g.width=canvas.width
+        g.height=canvas.height;
+        g.style.opacity='.8';
+
+
+        screenshot = ctx.getImageData( 0, 0, canvas.width, canvas.height );
+        glitchTrigger();
+        newFrame();
+        for(let i=0;i< glitchSamples ;i++){
+            all[i]= await makeGlitch(i);
+        }
+    });
+
+    let makeGlitch = async function(i){
+        let glitchParams = {
+            seed:       37, // integer between 0 and 99
+            quality:    69, // integer between 0 and 99
+            amount:     50, // integer between 0 and 99
+            iterations: i  // integer
+        };
+
+        let data = await glitch( glitchParams ).fromImageData( screenshot ).toImageData()
+        return data;
+    }
+    */
+</script>
+</html>
