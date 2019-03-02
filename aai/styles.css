@@ -1,103 +1,38 @@
+#__bs_notify__ { opacity: 0; }
 
-body{
-    position: absolute;
-    bottom: 0px;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    box-sizing: border-box;
-    background-color: #e7e7e6;
-    font-family: "Arial";
-    font-size: 15px;
-    display: grid;
-    cursor:default;
+html, body {
+	background-color: white;
+	color: black;
+	margin: 0;
+	padding: 6px 10px;
 }
 
-#logo{
-    width: 60%;
-    align-self: center;
-    margin: auto;
-    cursor:pointer;
+a {
+	color: black;
+	text-decoration: underline;
+	cursor: pointer;
+}
+a:hover { color: blue; }
 
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
-#title{
-    position: absolute;
-    padding: 35px;
-    font-size: 40px;
-    font-weight: bold;
-    cursor:pointer;
+li { padding-top: 10px; }
 
+.toggle2 { text-decoration: none; }
+
+.information {
+	width: 350px;
+	max-width: 90vw;
+	display: none;
 }
+.information2 { display: none; }
 
-#footer{
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    font-size:18px;
-    font-weight:bold;
-}
-a{
-    color:black;
-    text-decoration:none;
-}
-#barcelona{
-    display: inline-block;
-    padding: 35px;
-}
-
-#lima{
-    display: inline-block;
-    right: 0px;
-    position: absolute;
-    padding: 35px;
-    text-align: right;
-}
-.mail{ font-style: italic; }
-
-#g{
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    filter: grayscale(100%);
-}
-
-#dialog{
-    position:absolute;
-    background: white;
-    padding: 5px;
-    display:none;
-
-}
-
-.video{
-    position: absolute;
-}
-
-
-#background{
-    position: absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    display:none;
-    overflow:hidden;
-}
-
-body[dark]{
-    color:white !important;
-    background: #181819 !important;
-}
-
-body[dark] a,
-body[dark] #logo{
-    filter: invert(100%);
-}
-
-/* RESPONSIVE */
-@media (max-width: 800px) {
-    #title{ font-size:30px }
-    #logo{ width: 50% }
+.small {
+	font-family: Arial, sans-serif;
+	letter-spacing: 0;
+	font-size: 15px;
 }
