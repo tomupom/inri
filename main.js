@@ -12,7 +12,7 @@ request.onload = function() {
     if (lastContributor == 'nazli-ercan') {
       document.getElementById('uc-logo').src = 'https://saiyu.org/space.png';
     } else {
-      document.getElementById('uc-logo').src = 'https://saiyu.org/space.png;
+      document.getElementById('uc-logo').src = 'https://saiyu.org/space.png';
     }
     data.contents.forEach(function(c) {
       var div = document.createElement('div');
