@@ -1,5 +1,5 @@
 var request = new XMLHttpRequest();
-var url = 'https://api.are.na/v2/channels/things-3kyvtba_vg';
+var url = 'https://api.are.na/v2/channels/painting-oaxqrcmnawo';
 request.open('GET', url, true);
 
 request.onload = function() {
