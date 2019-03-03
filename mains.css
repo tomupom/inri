@@ -1,5 +1,5 @@
 body, html {
-  margin: 0;
+  margin: 2;
 }
 
 @font-face{
@@ -18,7 +18,7 @@ body, html {
 }
 
 .entry {
-  font-family: 'fu-reg';
+  font-family: 'Montserrat';
   line-height: 1.1em;
   min-width: 200px;
   max-width: 200px;
