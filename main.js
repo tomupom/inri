@@ -10,9 +10,9 @@ request.onload = function() {
 
     var lastContributor = data.contents[data.contents.length-1].connected_by_user_slug;
     if (lastContributor == 'nazli-ercan') {
-      document.getElementById('uc-logo').src = 'img/uc_n.png';
+      document.getElementById('uc-logo').src = 'https://saiyu.org/space.png';
     } else {
-      document.getElementById('uc-logo').src = 'img/uc_e.png';
+      document.getElementById('uc-logo').src = 'https://saiyu.org/space.png;
     }
     data.contents.forEach(function(c) {
       var div = document.createElement('div');
