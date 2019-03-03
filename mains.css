@@ -1,0 +1,93 @@
+body, html {
+  margin: 0;
+}
+
+@font-face{
+  font-family:'Montserrat', sans-serif;
+  src:url("https://fonts.googleapis.com/css?family=Montserrat");
+}
+
+@font-face{
+  font-family:'Montserrat', sans-serif;
+  src:url("https://fonts.googleapis.com/css?family=Montserrat:700");
+}
+
+#entries {
+  display: flex;
+  flex-direction: row;
+}
+
+.entry {
+  font-family: 'fu-reg';
+  line-height: 1.1em;
+  min-width: 200px;
+  max-width: 200px;
+  margin-bottom: 200px;
+}
+
+.entry a {
+  text-decoration: none;
+  color: #AAA;
+}
+
+.entry img {
+  width: 100%;
+}
+.entry p a[href] {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.entry p:first-of-type {
+  -webkit-margin-before: 0em;
+}
+
+.entry p {
+  margin-bottom: 1.07em;
+}
+.entry.image {
+  width: 500px;
+}
+
+.caption {
+  font-size: .8em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: -1em;
+}
+
+strong,b {
+  font-weight: normal;
+  font-family: 'fu-bold';
+}
+
+#uc-logo {
+  margin-top: -20px;
+  width: 50%;
+}
+
+#dot-dot-dot:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4,end) 900ms infinite;
+  animation: ellipsis steps(4,end) 900ms infinite;
+  content: "\2026"; /* ascii code for the ellipsis character */
+  width: 0px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 22px;
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 22px;
+  }
+}
