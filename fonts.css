@@ -1,9 +1,2 @@
-@font-face {
-	font-display:block;
-	font-family:"undefined medium";
-	font-stretch:normal;
-	font-style:normal;
-	font-weight:normal;
-	src:url("/assets/fonts/undefined-medium.woff2") format("woff2"),
-	    url("/assets/fonts/undefined-medium.woff") format("woff");
-}
+@font-face{font-display:block;font-family:"undefined medium";font-stretch:normal;font-style:normal;font-weight:normal;src:url("/assets/fonts/undefined-medium.woff2") format("woff2"),
+url("/assets/fonts/undefined-medium.woff") format("woff");}
