@@ -16,7 +16,7 @@ body, html {
   line-height: 1.4em;
   min-width: 400px;
   max-width: 400px;
-  margin-bottom: 400px;
+  margin-bottom: 200px;
 }
 
 .entry a {
@@ -30,7 +30,7 @@ body, html {
 .entry p a[href] {
   overflow-wrap: break-word;
   word-wrap: break-word;
-  width: 200px;
+  width: 100px;
 }
 
 .entry p:first-of-type {
