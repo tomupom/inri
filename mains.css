@@ -14,9 +14,9 @@ body, html {
 .entry {
   font-family: 'Helvetica', 'Arial', sans-serif;
   line-height: 1.4em;
-  min-width: 200px;
+  min-width: 400px;
   max-width: 400px;
-  margin-bottom: 200px;
+  margin-bottom: 400px;
 }
 
 .entry a {
