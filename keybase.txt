@@ -4,9 +4,9 @@ https://keybase.io/tomupom
 
 I hereby claim:
 
-  * I am an admin of https://inri.ws
+  * I am an admin of https://tom.org.nz
   * I am tomupom (https://keybase.io/tomupom) on keybase.
-  * I have a public key with fingerprint 057F 2EF8 A178 9A93 9869  E1CB 71B4 7E18 C5FB 925B
+  * I have a public key ASBExkdiJmzYyS1UiPSAVB6yLdXEmL49qOYTDyL4haklMwo
 
 To do so, I am signing this object:
 
@@ -14,57 +14,39 @@ To do so, I am signing this object:
   "body": {
     "key": {
       "eldest_kid": "0101bbb312d32eca49004fc4711b29fa84933b8a89b2c2927e40a5aae0a0295718060a",
-      "fingerprint": "057f2ef8a1789a939869e1cb71b47e18c5fb925b",
       "host": "keybase.io",
-      "key_id": "71b47e18c5fb925b",
-      "kid": "0101bbb312d32eca49004fc4711b29fa84933b8a89b2c2927e40a5aae0a0295718060a",
+      "kid": "012044c64762266cd8c92d5488f480541eb22dd5c498be3da8e6130f22f885a925330a",
       "uid": "c01a4402507061b90f4e37c2a963a219",
       "username": "tomupom"
     },
+    "merkle_root": {
+      "ctime": 1553984735,
+      "hash": "8fa9f52f69ad80512eeb80367f971d933f1f33a1c7655d08575ddb0c02625cf304ca4553a8be816f6cda81ee0ca962b03c35e5664585634362682ea300a4c43a",
+      "hash_meta": "9877483408176b3b43a3729b63f742f01d3ca33fe71332f0ecaa96f18336bea6",
+      "seqno": 5063071
+    },
     "service": {
-      "hostname": "inri.ws",
+      "entropy": "dtggZxlO4sTfChDoFth3ykQc",
+      "hostname": "tom.org.nz",
       "protocol": "https:"
     },
     "type": "web_service_binding",
-    "version": 1
+    "version": 2
   },
-  "ctime": 1550784679,
-  "expire_in": 157680000,
-  "prev": "14dbcb7485ac6c2c14eae30bbbea6da26b7dd75f689193b8f9490df2b982d045",
-  "seqno": 8,
+  "client": {
+    "name": "keybase.io go client",
+    "version": "3.1.2"
+  },
+  "ctime": 1553984747,
+  "expire_in": 504576000,
+  "prev": "f888ccf449f7d537cae68d7e7e56ce453582054b05959f2f1b33197ec1cea824",
+  "seqno": 38,
   "tag": "signature"
 }
 
 which yields the signature:
 
------BEGIN PGP MESSAGE-----
-Version: Keybase OpenPGP v2.1.0
-Comment: https://keybase.io/crypto
-
-yMNBAnicrVJrTBRXGF3oii66oZoSHmnFTIpAwuPO7MzODKGlNVU2sRWbCn1Au9yZ
-uYsjsLM7s+xCKeC2koBtYwFTtAarolBKhQrbBVxSi0KrRYgYK8imhlQsTcFg0LSB
-UtMZYv/1Z++fm3tyzrnnO/mGjE/owkOcvqro4b8a8kJGButLdflSdFsFxklCOZZe
-gRWh1QsVC0hxWYtEAUvHAA5wjuNMOCGYCMRDkgWAtPEkjeMcwdogQ7ImE8dAhuUI
-nmAJGpEAUhAiAAHBUjTOADOAWDJmE+2FSHbIot2l2VK0jUA2BuI0w0LWxDJmFuE8
-R+McSSOc4SkbxxIUpwr3SoqmUMNxUEGpoqRi6sO6Gu8/+P9z7tJVOx7gkCQBQQEa
-mHGOBTYSmWiegKzZBAmc1YgKku2wBKlsl1RS6pBKsMpkTAXdIo+0XrVBHhNEuyym
-ehRV5ZAll8RLxSq41+VyKOmayFXu0FgexFkf662caBfUBlWFG8mKKNmxdFxl8i5R
-M8QpNRhDmmk2GUNlDlFGVlFjULSZAerR/kFu1RInBU5tmWQoyJt5gsdJBJEJqE0h
-aBYgYeZoQaApm5lhcVbtx8aqxQk2gmMZQgAkhWkTOe0Sls6oMWGhaqmIhXboKpUR
-VnlxMF+vCwnXha0J1TZLF2548t99K7NErGywvnD/XXLn18F2byN+/nJ8/dN9XT19
-dApm6exa2pTmN1QVGB8s9OVWpXHtIYEPfhjfnzOX/Xfb5kXL9MquO1MVUTMnS+PW
-yTWvNHx4JrN9wN819evBZ33bdOB0Y0PveHZGor6rqTb2xYCywmclX7S1N165lhvT
-upx2KKxF36Fjb25pn4l5KyIKdJy2js6On8k0vDP7leWpH7/ZOHTHF+s9Pni1fD72
-cOSljNBbXzR/Xjs/ebwiIeXGvVb/3Z2Jf9RHFpyPH9zhab0nPViuHQvUyb/FjzYN
-rBv6eTa4VOe9G3xZqZu7faynKjPs0anXPxIAuBn1sSX1Fykqf59l47b7ldU+Q8TR
-gTCixrl1fH/cRErUtS/fzt+0Q6nMvcABqmDD+pScN52dEbeTZlsGfM24uLQrkKXz
-5QXfaAmsHTWffdX5fb8+2KA3ut977rXPtvtHlvcc2OcHL+0eO/h89eS5mI4EJasx
-3uOfLSuvKSs8OtoaeGbqxoF+4/z0VM+JrXvi6r9LuDR/0tCmPzVnDE2K9gTP9iRx
-wM2M9w4v8osPJ4vtj27lJWanzfQvVD+Ei+t/cl6YDkSOZJxzT3SvWTuWdOR6kTfN
-0+2akrd3NAuB4dhPjsAtfcbQ6/yJps3Wb/UT9b9bDO/XfEqx3u7hxqveK8MhvcUR
-rX/mBPoOz11e0HdmTuj+AS2ewoo=
-=PZV7
------END PGP MESSAGE-----
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgRMZHYiZs2MktVIj0gFQesi3VxJi+PajmEw8i+IWpJTMKp3BheWxvYWTESpcCJsQg+IjM9En31TfK5o1+flbORTWCBUsFlZ8vGzMZfsHOqCTEILXSthWASqLea6hbvCW7MShYny9EDLO9Rq6ZqvidJeH1AgHCo3NpZ8RA2bK2HvlaPK9SPSpa5d0q22Cl8MlYX8KlVRv2Huqg6M7vWGvLeP9jlDvWedNLWIfUariEpZxnUW+DN/fRjQnTAahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIFLd1x7gh2SYQZ+nrApMtJAfjJL2JpQB5lSzuLASLDjlo3RhZ80CAqd2ZXJzaW9uAQ==
 
 And finally, I am proving ownership of this host by posting or
 appending to this document.
