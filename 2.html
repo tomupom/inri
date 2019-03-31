@@ -10,9 +10,29 @@
     <div class="layout">
 	    <p><b>Nau mai, haere mai!</b> ↓<br />
 	    <small>Tom Hackshaw (斗夢 ハクショウ)<br />b. 1995 </small></p>
-      <p><audio controls="">
-	<source src="/pepeha-tom.mp3" type="audio/mp3">
-</audio></p>
+      <p><audio id="yourAudio" preload='none'>
+    <source src='/pepeha-tom.mp3' type='audio/mp3' />
+</audio>
+<a href="#" id="audioControl">Pepeha</a>
+	      <script language="Javascript">
+	          ctrl = document.getElementById('audioControl');
+
+ctrl.onclick = function () {
+
+    // Update the Button
+    var pause = ctrl.innerHTML === 'Pause';
+    ctrl.innerHTML = pause ? 'Play' : 'Pause';
+
+    // Update the Audio
+    var method = pause ? 'pause' : 'play';
+    yourAudio[method]();
+
+    // Prevent Default Action
+    return false;
+};
+	      </script>
+	      
+	   </p>
       <ul>
         <li><a class="title title-folder" href="https://wiki.thac.xyz">e-Portfolio</a></li>
         <li><a class="title title-folder" href="https://saiyu.org/artists">Aotearoa Models of Practice</a></li>
