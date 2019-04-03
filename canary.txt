@@ -1,0 +1,32 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+I positively confirm that the integrity of my website is sound: all my infrastructure is in my control, I have not been compromised or suffered a data breach, I have not disclosed any private encryption keys, and I have not been forced to modify my website to allow access or information leakage to a third party.
+
+This canary will be re-signed on the following dates:
+
+* May 20
+* August 20
+* November 20
+
+I will include a link to a recent news article[1] in each update to establish that the signature was not pre-generated. 
+
+1. https://www.nzherald.co.nz/nz/news/article.cfm?c_id=1&objectid=12218842
+-----BEGIN PGP SIGNATURE-----
+Version: Keybase OpenPGP v2.1.0
+Comment: https://keybase.io/crypto
+
+wsFcBAABCgAGBQJcpBPvAAoJEHG0fhjF+5Jb3c4QAIx4XkIm4LLyj5a3DWFhCKiv
+/178pj09djbU83/uhJjGh/TGJPrjkmA+TMtpcKF5RICHPiZLvdpL+50tTtdxB/6T
+dyfedglAQUGo1BIzurmPNIwxT0kBw8pQFK0sZAU1jb+bMhY9BaxtZsyxVHX+y4SM
+DtEbx4gFcqJBCJPzzHIsFCzA1KhaQonNsEeEAaldOpCH/1HHGT+HlLLGxz8YFTnU
+Sci1sJOVDbkwJT4M3pJAbQMsP2ItqcacWS/2j9YjEStyJF0u11fI3dQZ8irf7fbJ
+2H5TKr/9fa2XzfnlHAMm+Up5+U5kGAr9jXNMvqcPSyONBDNlHOmo2kBZ3rnxZcE1
+bq+Cr0kB6PVV2sb2V+zaDGtd9DMXrLKoNgRV/XRr1BjAkoopZosioxvGd9v0OIUx
+59a6QMfKYbza9B5cb8qHdL2NMbC6JXtfZyKvTFfO4QZc5E5FhzLD462u2MyXEqrm
+fuzHjWM1DMnrOoMxMvug6OkiyBh8dwxwIzEeT+llWZ5jvnVMbmo+J1BXSRGtjFfa
+c8aQIz4sXJxMLqAFJSay7Yl0kuMu5dBykk1YFrBJXnVp6ZEelsG5WnNnylA3v0NK
+qnN3k+PrRWgtYAQ9S9CxWoau9SWsyF3Ce/j4+G8qgPHXYJ7MvIFbieQUKbUIBsZw
+DEAkIFsoXjHJ1ougBQBi
+=afBH
+-----END PGP SIGNATURE-----
