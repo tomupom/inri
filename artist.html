@@ -14,10 +14,35 @@
 		 <iframe src="https://docs.google.com/document/d/e/2PACX-1vSCI-HQqQtWCwPanm8ucfdoWkI7uATD3w5AMO4T0E0FXisvzlt92sVuIz0ay8VPF0BqYaoxwlbJ_Zo7/pub?embedded=false"></iframe>
 	    </div>
 	  </div>
+	
 	   
 
     </div>
 	   
-    <script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
-  </body>
+    
+<script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
+   <script>
+        // get all iframes that were parsed before this tag
+        var iframes = document.getElementsByTagName("iframe");
+
+        for (let i = 0; i < iframes.length; i++) {
+            var url = iframes[i].getAttribute("src");
+            if (url.startsWith("https://docs.google.com/document/d/")) {
+                // create div and replace iframe
+                let d = document.createElement('div');
+                d.classList.add("embedded-doc"); // optional
+                iframes[i].parentElement.replaceChild(d, iframes[i]);
+
+                // CORS request
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', url, true);
+                xhr.onload = function() {
+                    // display response
+                    d.innerHTML = xhr.responseText;
+                };
+                xhr.send();
+            }
+        }
+    </script>
+</body>
 </html>
